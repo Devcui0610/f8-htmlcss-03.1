@@ -6,6 +6,8 @@
     --primary-color: #143c3c;
     --text-color-black-gray: #575d5e;
     --Primary-color-black: #152427;
+    --Secondary-color-light-green: #e2eddf;
+    --text-color-light-gray: #7d8188;
 }
 
 html,
@@ -210,11 +212,12 @@ a {
     position: absolute;
     width: 646px;
     height: 690px;
+    top: -40px;
     background: rgb(77, 187, 154);
     background: radial-gradient(
         circle,
-        rgba(77, 187, 154, 0.7399553571428572) 0%,
-        rgba(255, 255, 255, 1) 72%
+        rgba(77, 187, 154, 0.7735688025210083) 0%,
+        rgba(255, 255, 255, 1) 74%
     );
     z-index: -1;
 }
@@ -262,4 +265,181 @@ a {
     bottom: -147px;
     right: 46px;
     z-index: 1;
+}
+
+/* ============== CLIENT =============== */
+.client {
+    margin-top: 43px;
+}
+
+.client__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 76px 121px;
+    border-radius: 999px;
+    background: var(--Secondary-color-light-green);
+}
+
+.client__item {
+    display: flex;
+    align-items: center;
+}
+
+.client__text {
+    color: var(--primary-color);
+    line-height: normal;
+}
+
+.client__text-google {
+    font-size: 3.1rem;
+    font-weight: 500;
+    margin-right: 47px;
+}
+
+.client__text-slack {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 51px;
+}
+
+.client__text-discord {
+    color: #163c35;
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin-left: 11px;
+    margin-right: 64px;
+}
+
+.client__text-riotinto {
+    font-family: "Sonsie One";
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-right: 63px;
+}
+
+.client__text-heroku {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1995rem;
+    margin-left: 14px;
+}
+
+/* ============== SERVICES =============== */
+.services {
+    margin-top: 106px;
+}
+
+.services__sub-title {
+    color: var(--Primary-color-black);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.625;
+}
+
+.services__sub-title::before {
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 1px;
+    margin-bottom: 11px;
+    margin-right: 21px;
+    background: var(--Primary-color-black);
+}
+
+.services__row {
+    display: grid;
+    grid-template-columns: 512px 1fr;
+    align-items: end;
+}
+
+.services__title {
+    width: 520px;
+    color: var(--Primary-color-black);
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.238;
+    margin-top: 12px;
+}
+
+.services__title::after {
+    display: inline-block;
+    content: "";
+    width: 66px;
+    height: 2px;
+    margin-left: 21px;
+    margin-bottom: 9px;
+    background: var(--Primary-color-black);
+}
+
+.services__cpanel {
+    display: flex;
+    gap: 17px;
+    margin-right: 73px;
+    justify-content: right;
+}
+
+.services__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: none;
+    background: var(--Secondary-color-light-green);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.services__btn:hover {
+    background: var(--primary-color);
+}
+
+.services__btn:hover .services__icon-pre,
+.services__btn:hover .services__icon-next {
+    filter: brightness(0) invert(1);
+}
+
+.services__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    margin-top: 76px;
+}
+
+.services__thumb {
+    width: 370px;
+    max-width: 100%;
+    height: 318px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+.services__item:hover .services__item--info {
+    padding: 0 18px 23px;
+}
+
+.services__item:hover {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.services__item--title {
+    color: var(--Primary-color-black);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 24px;
+}
+
+.services__item--desc {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.72;
+    width: 268px;
+    max-width: 100%;
+    margin-top: 18px;
 }
